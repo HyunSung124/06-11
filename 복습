@@ -1,0 +1,135 @@
+# a = 'hello python'
+# b = 'x'
+# print(a.count('o'))#count(문자) 해당 문자의 개수를 구해주는 함수
+# print(a.find('x'))#find('문자') 이 문자의 시작 인덱스 번호를 반환
+                    #없는 문자를 찾을경우에는 -1을 반환한다.
+# print(a.index('l'))#index('문자') 해당 문자의 시작 인덱스 번호를 반환
+#find함수와는 별개로 index함수는 없는 값을 넣으면 오류를 반환한다.
+# print(','.join(a))#특정 문자를 인덱스번호 사이사이에 넣어준다.
+# print(','.join(b))
+
+#print(a.replace('py','my')#replace(old,new) old에 들어간 문자를 new자리에 들어간 문자로 대체한다.
+
+# a = "....app.le...."
+# print('|',a.lstrip('.'),'|', sep="") # a 문자열에서 왼쪽부터 연속되는 . 지우기
+# print('|', a.strip('|'),'|', sep="") # a 문자열에서 양쪽부터 연속되는 . 지우기
+# print('|', a.rstrip('.'), '|', sep="")
+
+#6이라는 값을 indexing하려면 어떻게 해야하는가?
+
+# # list_a = [1,2,3[4,5,[6,7],8],9,10]
+# print(list_a[3][2][0])
+# #list_a의 길이=?
+#print(len(list_a))
+
+# #3이라는 값을 7로 변경 == 수정
+# list_a = [1,2,3,4]
+# #list_a[2] =7
+
+
+
+
+
+
+# a = [4,1,2,3,3,5,3]
+# a.append(5)#append = 해당 값을 리스트의 마지막 인덱스에 추가
+# a.reverse()#reverse = 순서반전
+# print(list(reversed(a))) #복사본을 가지고 순서 반전후 리스트를반환
+#a.insert(0,7) #insert(위치, 값) = 해당 위치에 원하는 값을 삽입
+#print(a.pop()) #()안에 아무 값도 넣지 않았을때에는 가장 마지막 인덱스에 위치한
+              #값이 추출된다. ()안에는 인덱스 번호가 들어간다.
+# print(a)
+# print(a.count(3)) count(값) = 해당 값이 리스트에 몇개 존재하는지를 반환
+#a.sort(reverse= True)# sort() 순서 정렬
+#print(sorted(a,reverse=True))
+#print(a)
+#a.remove(5)#remove(값) = 리스트에서 해당 값을 삭제
+#b = [6,7,8,9]
+#a.extend(b)#리스트의 확장()
+#a.append(b)
+
+#print(len(a))
+
+# a =(1,2,3,4)
+# a[3] = 7
+# print(a)
+# del a[2]
+# print(a)
+#
+#
+# b = (2,)
+# print(type(b))
+
+# d = {'apple' : '사과', "banana": "바나나", 3: '삼'}
+# # print(d['apple' : '사과', "banana"], d[3]#key값을 이용해서 value값 뽑아내기
+# # print(d['orange'])#key값에 없는 값을 넣을 경우 keyerror가 발생한다.
+#
+# d['apple'] = '복숭아'
+# # #삭제
+# # del d['banana']
+# #추가
+# # d['orange'] = '오렌지'
+#
+# print(d.keys())
+# print(d.values())
+# print(d.items())
+#
+# print('apple'in d)
+
+#자료형들의 참과 거짓 = 값이 있으면 참 없으면 거짓
+#boolean(불 또는 불린) = 자료형의 참 거짓을 나타내는 함수(True, False)
+# print(bool('python'), bool(''))#문자열
+# print(bool([1, 2, 3]), bool([]))#리스트
+# print(bool((1, 2)), bool(()))#튜플
+# print(bool({'1' : 1}), bool ({}))#딕셔너리
+# print(bool(3), bool(0)) #정수 = 0을 제외한 모든 정수는 True다.
+# print(bool(None))#None = 값이 있다 없다를 뜻함
+
+# 반복문
+# while문 - 조건을 만족하는 동안 반복 실행
+# while True:#조건이 항상 참 == 무한 반복
+#     if 조건:
+#         break
+#     if 조건:
+#         continue
+# num = 10
+# while True:
+#     if num == 0:
+#         break
+#     if num %2 == 0:
+#         continue
+#     print(num)
+
+
+
+# for문 -
+# for 변수 in 연속된 자료형/range():
+#     실행문
+# for i in range(1,11,2):     #range(10) = (0,1,2,3,4,5,6,7,8,9) = 0부터n-1까지의 범위
+#     print(i)
+
+
+# a = [1,2,3,4,5]
+# a ='hello python'
+# for i in a:
+#   print(i)
+
+# phone_number = "01033334444"
+# length = len(phone_number)
+# print(length)
+# star = '*' * length
+# print(star)
+# result = star+ phone_number[7:]
+# print(result)
+
+# def solution(phone_number):
+#     length = len(phone_number) - 4
+#     star = '*' * length
+#     result = star + phone_number[-4:]
+#     return result
+#
+# def solution(phone_number):
+#     return '*'*(len(phone_number)-4) + phone_number[-4:]
+#
+# phone_number = "01033334444"
+# print(solution(phone_number))
